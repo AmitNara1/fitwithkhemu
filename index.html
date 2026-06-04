@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FitWithKhemu | Premium Gym Management & Personal Coaching</title>
+  <meta name="description" content="Transform your body with Khemu. Customized workout schedules, premium HSL design system, personalized diet charts, and direct client management panels.">
+  <link rel="icon" type="image/png" href="https://craftcms-assets.playbookapp.io/richard-duchon-FAV_2021-09-28-155048.jpg">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <!-- Core Design Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- App Loader (FitnessTalks style load overlay) -->
+  <div class="app-loader" id="appLoader">
+    <div class="loader-logo">FITWITH<span>KHEMU</span></div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- Translucent Sticky Navigation Bar -->
+  <header class="nav-header" id="navHeader">
+    <div class="nav-container">
+      <a href="#home" class="logo" onclick="app.showPage('public')">FITWITH<span>KHEMU</span></a>
+      
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" onclick="app.scrollToSection('home')">Home</a>
+        <a href="#gallery" class="nav-link" onclick="app.scrollToSection('gallery')">Gallery</a>
+        <a href="#schedule" class="nav-link" onclick="app.scrollToSection('schedule')">Schedule</a>
+        <a href="#programs" class="nav-link" onclick="app.scrollToSection('programs')">Programs</a>
+        <a href="#calculator" class="nav-link" onclick="app.scrollToSection('calculator')">Calculator</a>
+        <a href="#pricing" class="nav-link" onclick="app.scrollToSection('pricing')">Memberships</a>
+        <a href="#gms" class="nav-link" onclick="app.showPage('gms')" style="color: var(--primary); font-weight: 700;">GMS Portal</a>
+      </nav>
+      
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <button class="nav-btn" onclick="app.openLoginModal()">
+          <i class="fa-solid fa-user-lock"></i> Login
+        </button>
+        <div class="menu-toggle" id="menuToggle" onclick="app.toggleMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PUBLIC PORTFOLIO EXPERIENCE -->
+  <main id="publicExperience">
+    
+    <!-- Hero Section (Duchon Red Accent + Visual Intensity) -->
+    <section class="hero-section" id="home">
+      <div class="hero-background"></div>
+      <div class="hero-container">
+        <div class="hero-content animate-fade-in-up">
+          <div class="hero-tag">Transform Your Physique</div>
+          <h1 class="hero-title">Maximum Impact<br><span>Personal Coaching</span></h1>
+          <p class="hero-desc">Ditch generic plans. Get high-intensity custom programming, direct accountability, and science-backed nutrition plans custom-built by Khemu to hit your goals.</p>
+          
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="app.scrollToSection('pricing')">
+              Explore Memberships <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="btn-secondary" onclick="app.scrollToSection('schedule')">
+              Book Training Hour
+            </button>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">25<span>/25</span></span>
+              <span class="stat-label">Clients Limit</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">98<span>%</span></span>
+              <span class="stat-label">Success Rate</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">8<span>+</span></span>
+              <span class="stat-label">Years Exp</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Mockup Preview (GMS Portal Simulation) -->
+        <div class="hero-media">
+          <div class="device-mockup">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+              <div class="device-header">
+                <div class="device-user">
+                  <div class="device-avatar">R</div>
+                  <div>
+                    <div class="device-greeting">Today's Split</div>
+                    <div class="device-username">Raj Patel</div>
+                  </div>
+                </div>
+                <i class="fa-regular fa-bell device-bell"></i>
+              </div>
+              
+              <div class="device-card">
+                <div class="device-card-title">Active Program</div>
+                <div class="device-card-value">5-Day Intense Split</div>
+                <div class="device-progress-bar">
+                  <div class="device-progress-fill"></div>
+                </div>
+                <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 6px; display: flex; justify-content: space-between;">
+                  <span>Training Hour: 06:00 AM</span>
+                  <span>70% Done</span>
+                </div>
+              </div>
+
+              <div style="font-size: 0.8rem; font-weight: 700; color: #fff; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em;">Today's Targets</div>
+              
+              <div class="device-workout-item">
+                <div class="device-workout-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                <div class="device-workout-info">
+                  <div class="device-workout-name">Chest &amp; Triceps Focus</div>
+                  <div class="device-workout-meta">4 Sets x 12 Reps</div>
+                </div>
+                <div class="device-workout-check checked"><i class="fa-solid fa-check"></i></div>
+              </div>
+
+              <div class="device-workout-item">
+                <div class="device-workout-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                <div class="device-workout-info">
+                  <div class="device-workout-name">Daily Protein Intake</div>
+                  <div class="device-workout-meta">Hit 160g Target</div>
+                </div>
+                <div class="device-workout-check checked"><i class="fa-solid fa-check"></i></div>
+              </div>
+
+              <div class="device-workout-item">
+                <div class="device-workout-icon"><i class="fa-solid fa-droplet"></i></div>
+                <div class="device-workout-info">
+                  <div class="device-workout-name">Water Intake Log</div>
+                  <div class="device-workout-meta">Drink 4.5 Litres</div>
+                </div>
+                <div class="device-workout-check"><i class="fa-solid fa-check" style="display: none;"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="device-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET COACH KHEMU: PHOTO & VIDEO GALLERY SHOWCASE -->
+    <section class="section" id="gallery" style="background: rgba(255, 255, 255, 0.005); border-top: 1px solid var(--border-glass);">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Meet Your Coach</span>
+          <h2 class="section-title">Trainer Khemu In Action</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Profile Card Portrait -->
+          <div class="gallery-card glass-panel">
+            <img src="images/khemu_profile.png" alt="Trainer Khemu Profile Portrait">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Head Coach</span>
+              <span class="gallery-title">Elite Physique Specialist</span>
+            </div>
+          </div>
+
+          <!-- Coaching Card Action -->
+          <div class="gallery-card glass-panel">
+            <img src="images/khemu_coaching.png" alt="Khemu instructing deadlifts">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Coaching Focus</span>
+              <span class="gallery-title">Form Optimization &amp; Safety</span>
+            </div>
+          </div>
+
+          <!-- Video Presentation Placeholder -->
+          <div class="gallery-card glass-panel video-placeholder" onclick="alert('Playing presentation video: How to execute proper deadlifts under Khemu's elite guidance.')">
+            <i class="fa-solid fa-circle-play"></i>
+            <div>
+              <span class="gallery-title" style="display: block; font-size: 1.2rem; font-weight: 700; color: #fff;">Watch Coaching Intro</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; display: block;">8 Min Motivation &amp; Client Success</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOCK: TIME SLOTS AVAILABILITY GRID ("Maintain the Clock") -->
+    <section class="section" id="schedule" style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+      <div class="section-container">
+        <div class="slots-intro-grid">
+          <div>
+            <span class="section-subtitle">Hour Slots Board</span>
+            <h2 style="font-size: 2.25rem; font-weight: 800; text-transform: uppercase; margin-top: 6px;">Maintain The Clock</h2>
+            <p style="color: var(--text-muted); margin-top: 15px;">Khemu limits his roster to 25 elite clients to ensure premium coaching quality. Every registered client is allocated **one specific 1-hour workout slot** per day. Check the live board below to see available hours and book yours before slots fill!</p>
+          </div>
+          
+          <div class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; gap: 12px; border-color: rgba(16, 185, 129, 0.2);">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); text-transform: uppercase;"><i class="fa-solid fa-circle-check"></i> System Scaling &amp; Load Health</div>
+            <div style="font-size: 0.9rem; color: var(--text-muted);">FitWithKhemu GMS is connected to a high-capacity database adapter. Cloud synchronizations take place instantly across client portals. Live booking slots are locked once confirmed by Coach Khemu.</div>
+          </div>
+        </div>
+
+        <div class="slots-board" id="publicSlotsBoard">
+          <!-- JS Injection -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Workout Programs Section -->
+    <section class="section" id="programs">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Exclusive Schedules</span>
+          <h2 class="section-title">Designed for Maximum Impact</h2>
+        </div>
+        
+        <div class="programs-grid">
+          <div class="program-card glass-panel">
+            <div class="program-icon"><i class="fa-solid fa-dumbbell"></i></div>
+            <h3 class="program-title">5-Day Intense Split</h3>
+            <p class="program-desc">For experienced lifters looking to maximize muscle hypertrophy. Focuses on targeted isolation and progressive overload schedules.</p>
+            <ul class="program-features">
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> 8 weeks worth of intense splits</li>
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Focus on mind-muscle connection</li>
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> 5 days workout, 2 rest days</li>
+            </ul>
+          </div>
+
+          <div class="program-card glass-panel">
+            <div class="program-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3 class="program-title">Push-Pull-Legs</h3>
+            <p class="program-desc">The ultimate functional schedule balancing muscle groups. Highly recommended for sustainable structural athletic builds.</p>
+            <ul class="program-features">
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Advanced 6-day split</li>
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Perfect balance of volume/frequency</li>
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Custom heavy leg schedules</li>
+            </ul>
+          </div>
+
+          <div class="program-card glass-panel">
+            <div class="program-icon"><i class="fa-solid fa-person-running"></i></div>
+            <h3 class="program-title">3-Day Full Body Split</h3>
+            <p class="program-desc">Perfect for busy professionals. Maximizes metabolic response and systemic conditioning with compound movements.</p>
+            <ul class="program-features">
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> 3 compound-heavy session/week</li>
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Cardio conditioning guidelines</li>
+              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Time-efficient yet highly effective</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BMR & Calorie Calculator -->
+    <section class="section" id="calculator" style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+      <div class="section-container">
+        <div class="calc-container">
+          <div class="calc-info">
+            <span class="section-subtitle" style="margin-bottom: 0;">Interactive Dashboard</span>
+            <h3 style="margin-top: 10px;">Find Your Calorie Baseline</h3>
+            <p>Know exactly what your body requires. Use Khemu's custom BMR (Basal Metabolic Rate) calculator to get your calculated calorie target based on your physical composition and goals.</p>
+            
+            <div class="calc-metric-grid">
+              <div class="metric-card glass-panel">
+                <span class="metric-title">Basal Metabolism</span>
+                <span class="metric-value" id="bmrResult">-- <span>kcal</span></span>
+              </div>
+              <div class="metric-card glass-panel">
+                <span class="metric-title">Target Intake</span>
+                <span class="metric-value" id="tdeeResult" style="color: var(--primary);">-- <span>kcal/day</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-form glass-panel">
+            <div class="form-group">
+              <label class="form-label">Gender</label>
+              <div class="gender-selector">
+                <div class="gender-option active" id="genderMale" onclick="app.setGender('male')">MALE</div>
+                <div class="gender-option" id="genderFemale" onclick="app.setGender('female')">FEMALE</div>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label" for="calcAge">Age (Years)</label>
+                <input type="number" id="calcAge" class="form-input" placeholder="25" value="25">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="calcWeight">Weight (kg)</label>
+                <input type="number" id="calcWeight" class="form-input" placeholder="70" value="70">
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label" for="calcHeight">Height (cm)</label>
+                <input type="number" id="calcHeight" class="form-input" placeholder="175" value="175">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="calcGoal">Fitness Goal</label>
+                <select id="calcGoal" class="form-select">
+                  <option value="gain">Gain Muscle (Surplus)</option>
+                  <option value="maintain" selected>Maintain Fitness</option>
+                  <option value="lose">Fat Loss (Deficit)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="calcActivity">Activity Level</label>
+              <select id="calcActivity" class="form-select">
+                <option value="1.2">Sedentary (No Exercise)</option>
+                <option value="1.375">Lightly Active (1-3 days/week)</option>
+                <option value="1.55" selected>Moderately Active (3-5 days/week)</option>
+                <option value="1.725">Very Active (6-7 days/week)</option>
+              </select>
+            </div>
+
+            <button class="btn-primary" onclick="app.calculateCalories()" style="justify-content: center; width: 100%;">
+              Calculate Baselines
+            </button>
+
+            <div class="calc-result-panel" id="calcResultPanel">
+              <div class="calc-result-title"><i class="fa-solid fa-circle-check"></i> Target Calculated</div>
+              <div class="calc-result-value" id="calcResultVal">2450 kcal</div>
+              <div class="calc-result-desc" id="calcResultDesc">Consume 2450 kcal daily with a target split of 40% Carb, 30% Protein, and 30% Fat to maintain your goals.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS & BRAND PARTNERS (ELEGANT INTEGRATED AD BLOCK) -->
+    <section class="section-container" style="padding: 20px 24px 0;">
+      <div class="ad-wrapper glass-panel">
+        <span class="ad-label">Premium Brand Partnerships</span>
+        <div class="ad-banner-grid">
+          <!-- Optimum Nutrition Affiliate -->
+          <div class="ad-card glass-panel" onclick="alert('Redirecting to Optimum Nutrition supplement affiliate shop under Khemu's partner discount code: KHEMU10')">
+            <div class="ad-card-icon"><i class="fa-solid fa-prescription-bottle"></i></div>
+            <div class="ad-card-info">
+              <span class="ad-card-brand">Gold Standard Whey</span>
+              <span class="ad-card-title">Optimum Nutrition India</span>
+              <span class="ad-card-discount">10% Off: KHEMU10</span>
+            </div>
+          </div>
+
+          <!-- MyProtein Affiliate -->
+          <div class="ad-card glass-panel" onclick="alert('Redirecting to MyProtein supplements online catalog with active coach code: FITWITHKHEMU')">
+            <div class="ad-card-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+            <div class="ad-card-info">
+              <span class="ad-card-brand">Impact Whey Protein</span>
+              <span class="ad-card-title">MyProtein India</span>
+              <span class="ad-card-discount">Extra 15% Off Code</span>
+            </div>
+          </div>
+
+          <!-- Under Armour Affiliate -->
+          <div class="ad-card glass-panel" onclick="alert('Redirecting to Under Armour athletic gear outlet with partner code: UA-KHEMU')">
+            <div class="ad-card-icon"><i class="fa-solid fa-shirt"></i></div>
+            <div class="ad-card-info">
+              <span class="ad-card-brand">Premium Gym Gear</span>
+              <span class="ad-card-title">Under Armour Apparel</span>
+              <span class="ad-card-discount">Exclusive Outlet Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Membership Plans Section -->
+    <section class="section" id="pricing">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Membership Plans</span>
+          <h2 class="section-title">Invest In Your Transformation</h2>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Silver Plan -->
+          <div class="plan-card glass-panel">
+            <div class="plan-header">
+              <div class="plan-name">Silver Plan</div>
+              <div class="plan-price">
+                <span class="plan-price-currency">₹</span>
+                <span class="plan-price-amount">1,999</span>
+                <span class="plan-price-period">/ month</span>
+              </div>
+            </div>
+            
+            <ul class="plan-features-list">
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Customized Workout Schedules</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Standard Diet Chart Guidelines</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> GMS Client Portal Login</li>
+              <li class="plan-feature-item disabled"><i class="fa-solid fa-circle-xmark"></i> 24/7 Trainer WhatsApp Chat</li>
+              <li class="plan-feature-item disabled"><i class="fa-solid fa-circle-xmark"></i> Weekly 1-on-1 Call Adjustments</li>
+            </ul>
+
+            <button class="plan-button" onclick="app.openCheckout('Silver', 1999)">Select Plan</button>
+          </div>
+
+          <!-- Platinum Plan (Best Value / Spotlight) -->
+          <div class="plan-card glass-panel premium">
+            <div class="plan-badge">Most Popular</div>
+            <div class="plan-header">
+              <div class="plan-name">Platinum Plan</div>
+              <div class="plan-price">
+                <span class="plan-price-currency">₹</span>
+                <span class="plan-price-amount">8,999</span>
+                <span class="plan-price-period">/ 6 months</span>
+              </div>
+            </div>
+            
+            <ul class="plan-features-list">
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Ultimate Heavy Weight Splits</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Advanced Macro Nutrition Profiles</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Full GMS Dashboard + History Logs</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Direct 24/7 WhatsApp Admin Hotline</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Weekly Video Checks &amp; Re-schedules</li>
+            </ul>
+
+            <button class="plan-button" onclick="app.openCheckout('Platinum', 8999)">Join Platinum Tier</button>
+          </div>
+
+          <!-- Gold Plan -->
+          <div class="plan-card glass-panel">
+            <div class="plan-header">
+              <div class="plan-name">Gold Plan</div>
+              <div class="plan-price">
+                <span class="plan-price-currency">₹</span>
+                <span class="plan-price-amount">4,999</span>
+                <span class="plan-price-period">/ 3 months</span>
+              </div>
+            </div>
+            
+            <ul class="plan-features-list">
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Comprehensive Goal Schedules</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> Personalized Meal Profile Targets</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> GMS Client Portal Login</li>
+              <li class="plan-feature-item"><i class="fa-solid fa-circle-check"></i> WhatsApp Community Thread</li>
+              <li class="plan-feature-item disabled"><i class="fa-solid fa-circle-xmark"></i> Weekly Video Checks &amp; Re-schedules</li>
+            </ul>
+
+            <button class="plan-button" onclick="app.openCheckout('Gold', 4999)">Select Plan</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation / Lead Intake Form -->
+    <section class="section" id="contact" style="background: rgba(255, 255, 255, 0.005); border-top: 1px solid var(--border-glass);">
+      <div class="section-container">
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-intro">
+              <span class="section-subtitle">Get In Touch</span>
+              <h3>Kickstart Your Goals</h3>
+              <p>Ready to get started but have some queries? Drop a request here and Khemu will review your initial profile to guide you on which plan works best for your physique targets.</p>
+            </div>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="contact-method-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <div class="contact-method-title">Direct WhatsApp</div>
+                  <div class="contact-method-value">+91 98765 09876</div>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <div class="contact-method-title">Trainer Email</div>
+                  <div class="contact-method-value">khemu@fitwithkhemu.in</div>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="contact-method-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <div class="contact-method-title">Gym Headquarters</div>
+                  <div class="contact-method-value">Gold's Gym Complex, South Delhi, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form glass-panel">
+            <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 8px;">Book Initial Consultation</h4>
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name</label>
+                <input type="text" id="contactName" class="form-input" placeholder="Enter full name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="+91 99999 99999">
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="name@domain.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactSlot">Preferred Time Slot</label>
+                <select id="contactSlot" class="form-select">
+                  <option value="none">Choose a slot (Optional)</option>
+                  <option value="slot-06">06:00 AM - 07:00 AM</option>
+                  <option value="slot-07">07:00 AM - 08:00 AM</option>
+                  <option value="slot-08">08:00 AM - 09:00 AM</option>
+                  <option value="slot-09">09:00 AM - 10:00 AM</option>
+                  <option value="slot-10">10:00 AM - 11:00 AM</option>
+                  <option value="slot-11">11:00 AM - 12:00 PM</option>
+                  <option value="slot-16">04:00 PM - 05:00 PM</option>
+                  <option value="slot-17">05:00 PM - 06:00 PM</option>
+                  <option value="slot-18">06:00 PM - 07:00 PM</option>
+                  <option value="slot-19">07:00 PM - 08:00 PM</option>
+                  <option value="slot-20">08:00 PM - 09:00 PM</option>
+                  <option value="slot-21">09:00 PM - 10:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Briefly Describe Your Physical Goals &amp; History</label>
+              <textarea id="contactMessage" class="form-input" style="height: 110px; resize: none;" placeholder="e.g. Muscle gain, training for 6 months, looking to fix diet..."></textarea>
+            </div>
+
+            <button class="btn-primary" onclick="app.submitConsultation()" style="justify-content: center; width: 100%;">
+              Send Consultation Request
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GMS DASHBOARD & PORTAL AREA (GMS MODULE CONTAINER) -->
+  <main class="dashboard-section" id="gmsDashboard">
+    <div class="dashboard-container">
+      
+      <!-- Trainer Dashboard View -->
+      <div id="trainerDashboard" style="display: none;">
+        <div class="dashboard-header">
+          <div class="dashboard-title-area">
+            <h2>GMS Administrative Console <span>Admin View</span></h2>
+            <div class="dashboard-desc">Manage clients registry, assign fitness plans, and track active billing.</div>
+          </div>
+          <div class="dashboard-actions">
+            <button class="btn-primary" onclick="app.openAddClientModal()">
+              <i class="fa-solid fa-user-plus"></i> Add New Client
+            </button>
+            <button class="btn-secondary" onclick="app.handleLogout()">
+              <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Selector: Directory vs Slot Board -->
+        <div class="dashboard-tabs">
+          <div class="dashboard-tab active" id="tabClients" onclick="app.switchTrainerTab('clients')">Client Directory</div>
+          <div class="dashboard-tab" id="tabSlots" onclick="app.switchTrainerTab('slots')">1-Hour Time Slots</div>
+        </div>
+
+        <!-- Dashboard Stats Row -->
+        <div class="stats-grid" id="trainerStatsRow">
+          <div class="stat-card glass-panel">
+            <div class="stat-card-info">
+              <span class="stat-card-title">Total Active Clients</span>
+              <span class="stat-card-value" id="statActiveClients">0</span>
+            </div>
+            <div class="stat-card-icon"><i class="fa-solid fa-users"></i></div>
+          </div>
+
+          <div class="stat-card glass-panel">
+            <div class="stat-card-info">
+              <span class="stat-card-title">Pending Enrollments</span>
+              <span class="stat-card-value" id="statPendingEnrollments">0</span>
+            </div>
+            <div class="stat-card-icon" style="color: #f59e0b;"><i class="fa-solid fa-hourglass-half"></i></div>
+          </div>
+
+          <div class="stat-card glass-panel">
+            <div class="stat-card-info">
+              <span class="stat-card-title">Total Seeding Revenue</span>
+              <span class="stat-card-value" id="statTotalRevenue">₹0</span>
+            </div>
+            <div class="stat-card-icon" style="color: #10b981;"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          </div>
+
+          <div class="stat-card glass-panel">
+            <div class="stat-card-info">
+              <span class="stat-card-title">System Health</span>
+              <span class="stat-card-value">100%</span>
+            </div>
+            <div class="stat-card-icon" style="color: #06b6d4;"><i class="fa-solid fa-shield-halved"></i></div>
+          </div>
+        </div>
+
+        <!-- Sub-panel A: Client Directory -->
+        <div class="dashboard-grid" id="trainerClientsPanel" style="margin-top: 10px;">
+          
+          <!-- Client Directory Table -->
+          <div class="glass-panel" style="overflow: hidden;">
+            <div class="dashboard-panel-header">
+              <h3 class="dashboard-panel-title"><i class="fa-solid fa-address-book"></i> Client Registry</h3>
+              <div style="font-size: 0.85rem; color: var(--text-muted);" id="clientRegistryCount">4 registered clients</div>
+            </div>
+            
+            <div class="table-wrapper">
+              <table class="client-table">
+                <thead>
+                  <tr>
+                    <th>Client Identity</th>
+                    <th>Membership Plan</th>
+                    <th>Fitness Schedule</th>
+                    <th>Billing Status</th>
+                    <th>Operations</th>
+                  </tr>
+                </thead>
+                <tbody id="clientTableBody">
+                  <!-- JS Injection -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Workout Plan Assignments Panel -->
+          <div class="glass-panel" style="overflow: hidden;">
+            <div class="dashboard-panel-header">
+              <h3 class="dashboard-panel-title"><i class="fa-solid fa-dumbbell"></i> Workout Schedules</h3>
+            </div>
+            
+            <div class="workout-plan-box">
+              <div class="workout-plan-header">
+                <div class="workout-plan-title" id="selectedClientPlanTitle">Select a client to view schedule</div>
+                <div class="workout-select-wrap">
+                  <select id="workoutPlanAssignSelector" class="workout-select" onchange="app.handleAssignPlanChange(this)">
+                    <option value="5-Day Split">5-Day Split</option>
+                    <option value="Push-Pull-Legs">Push-Pull-Legs</option>
+                    <option value="3-Day Split">3-Day Split</option>
+                    <option value="3-Day Split for Women">3-Day Split for Women</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="workout-split-list" id="assignedWorkoutScheduleList">
+                <!-- JS Injection -->
+                <div style="text-align: center; color: var(--text-dark); padding: 40px 0;">
+                  <i class="fa-solid fa-arrow-pointer" style="font-size: 1.5rem; margin-bottom: 8px;"></i>
+                  <div>Click the blue assignment button next to a client in the directory to manage their schedules.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sub-panel B: 1-Hour Time Slots Manager -->
+        <div class="glass-panel" id="trainerSlotsPanel" style="display: none; overflow: hidden; margin-top: 10px;">
+          <div class="dashboard-panel-header">
+            <h3 class="dashboard-panel-title"><i class="fa-solid fa-clock"></i> Hour Schedule &amp; Clock Allocation</h3>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Allocate slots to active roster clients</div>
+          </div>
+          
+          <div style="padding: 30px;">
+            <div class="gms-slots-grid" id="trainerSlotsGrid">
+              <!-- JS Injection -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Client Portal View -->
+      <div id="clientPortal" style="display: none;">
+        <div class="dashboard-header">
+          <div class="dashboard-title-area">
+            <h2>Welcome Back, <span id="clientPortalHeaderName">Active Client</span></h2>
+            <div class="dashboard-desc">Track today's targets, complete assigned routines, and log progress.</div>
+          </div>
+          <div class="dashboard-actions">
+            <button class="btn-secondary" onclick="app.handleLogout()">
+              <i class="fa-solid fa-right-from-bracket"></i> Logout Portal
+            </button>
+          </div>
+        </div>
+
+        <div class="client-portal-grid">
+          <!-- Client Profile Overview -->
+          <div class="profile-card glass-panel">
+            <div class="profile-avatar" id="clientPortalInitials">CP</div>
+            <div>
+              <div class="profile-name" id="clientPortalName">Raj Patel</div>
+              <span class="profile-tag" id="clientPortalMembership">Platinum Tier Membership</span>
+            </div>
+
+            <div class="profile-details-grid">
+              <div class="profile-detail-item">
+                <span class="profile-detail-label">Assigned Regime</span>
+                <span class="profile-detail-value" id="clientPortalPlan">5-Day Split</span>
+              </div>
+              <div class="profile-detail-item">
+                <span class="profile-detail-label">Workout Time Slot</span>
+                <span class="profile-detail-value" id="clientPortalTimeSlot" style="color: var(--secondary); font-weight: 700;">06:00 AM</span>
+              </div>
+              <div class="profile-detail-item">
+                <span class="profile-detail-label">Current Weight</span>
+                <span class="profile-detail-value" id="clientPortalWeight">78 kg</span>
+              </div>
+              <div class="profile-detail-item">
+                <span class="profile-detail-label">Calorie Goal</span>
+                <span class="profile-detail-value" id="clientPortalCalories" style="color: var(--primary); font-weight: 700;">2800 kcal</span>
+              </div>
+            </div>
+            
+            <div class="glass-panel" style="width: 100%; padding: 15px; margin-top: 15px; border-color: rgba(244, 63, 94, 0.2); background: rgba(244, 63, 94, 0.02);">
+              <div style="font-size: 0.8rem; font-weight: 700; color: var(--primary); text-transform: uppercase;">Trainer Tip of the Day</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">"Focus on slow negatives today. Control the eccentric phase of your lifts for optimal fiber recruitment. Stay hydrated!"</div>
+            </div>
+          </div>
+
+          <!-- Routine & Goal Checklist (Local Storage synced) -->
+          <div class="checklist-container glass-panel">
+            <div class="checklist-title-area">
+              <div>
+                <h3>Assigned Targets Checklist</h3>
+                <span class="checklist-date">Real-time Local Sync</span>
+              </div>
+              <div class="status-badge active" style="font-size: 0.7rem;" id="clientPortalGoalStatus">Progress Tracker</div>
+            </div>
+
+            <div class="workout-split-list" style="margin-top: 10px;">
+              
+              <div class="log-item" id="logItemWorkout">
+                <div class="log-info">
+                  <div class="log-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                  <div>
+                    <div class="log-text">Complete Assigned Workout Session</div>
+                    <div class="log-meta" id="clientPortalRoutineName">Chest &amp; Triceps Focus (4 Sets x 12 Reps)</div>
+                  </div>
+                </div>
+                <div class="log-checkbox" id="logChkWorkout" onclick="app.togglePortalLog('workout')">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+
+              <div class="log-item" id="logItemCardio">
+                <div class="log-info">
+                  <div class="log-icon"><i class="fa-solid fa-person-walking"></i></div>
+                  <div>
+                    <div class="log-text">LISS Cardio Training</div>
+                    <div class="log-meta">30 Mins treadmill walk (15% incline)</div>
+                  </div>
+                </div>
+                <div class="log-checkbox" id="logChkCardio" onclick="app.togglePortalLog('cardio')">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+
+              <div class="log-item" id="logItemMeals">
+                <div class="log-info">
+                  <div class="log-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                  <div>
+                    <div class="log-text">Diet Compliance</div>
+                    <div class="log-meta">Hit daily macro protein profile baseline</div>
+                  </div>
+                </div>
+                <div class="log-checkbox" id="logChkMeals" onclick="app.togglePortalLog('meals')">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+
+              <div class="log-item" id="logItemWater">
+                <div class="log-info">
+                  <div class="log-icon"><i class="fa-solid fa-droplet"></i></div>
+                  <div>
+                    <div class="log-text">Water Hydration Baseline</div>
+                    <div class="log-meta">Drink 4 - 5 Litres water throughout the day</div>
+                  </div>
+                </div>
+                <div class="log-checkbox" id="logChkWater" onclick="app.togglePortalLog('water')">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL: SECURE LOGIN -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-content-box glass-panel">
+      <div class="modal-close-btn" onclick="app.closeLoginModal()"><i class="fa-solid fa-xmark"></i></div>
+      <h3 class="modal-title">GMS System Authentication</h3>
+      
+      <div style="font-size: 0.85rem; color: var(--text-muted); background: rgba(244, 63, 94, 0.05); padding: 12px; border-radius: 6px; border: 1px dashed rgba(244, 63, 94, 0.2);">
+        <i class="fa-solid fa-circle-info"></i> <strong>Simulation Credentials:</strong><br>
+        • Trainer: <code>khemu</code> / <code>trainer123</code><br>
+        • Client: <code>raj.patel@gmail.com</code> / <code>client123</code>
+      </div>
+
+      <div class="form-group" style="margin-top: 10px;">
+        <label class="form-label" for="loginUsername">Username / Client Email</label>
+        <input type="text" id="loginUsername" class="form-input" placeholder="e.g. khemu or raj.patel@gmail.com">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="loginPassword">Access Password</label>
+        <input type="password" id="loginPassword" class="form-input" placeholder="••••••••••••" value="trainer123">
+      </div>
+
+      <button class="btn-primary" onclick="app.submitLogin()" style="justify-content: center; width: 100%;">
+        Authenticate Access <i class="fa-solid fa-lock-open"></i>
+      </button>
+      
+      <div id="loginError" style="color: #ef4444; font-size: 0.85rem; text-align: center; display: none;">
+        Invalid credentials. Please refer to simulation baselines above.
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: ADD NEW CLIENT (TRAINER ACTION) -->
+  <div class="modal-overlay" id="addClientModal">
+    <div class="modal-content-box glass-panel" style="max-width: 600px;">
+      <div class="modal-close-btn" onclick="app.closeAddClientModal()"><i class="fa-solid fa-xmark"></i></div>
+      <h3 class="modal-title">Register New Client Entry</h3>
+      
+      <div class="form-group-row">
+        <div class="form-group">
+          <label class="form-label" for="addClientName">Full Name</label>
+          <input type="text" id="addClientName" class="form-input" placeholder="e.g. Rohan Khanna">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="addClientEmail">Client Email</label>
+          <input type="email" id="addClientEmail" class="form-input" placeholder="rohan@gmail.com">
+        </div>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group">
+          <label class="form-label" for="addClientPhone">Phone Number</label>
+          <input type="text" id="addClientPhone" class="form-input" placeholder="+91 99999 88888">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="addClientGoal">Fitness Target</label>
+          <input type="text" id="addClientGoal" class="form-input" placeholder="e.g. Lean Conditioning" value="General Fitness">
+        </div>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group">
+          <label class="form-label" for="addClientMembership">Membership Tier</label>
+          <select id="addClientMembership" class="form-select">
+            <option value="Silver">Silver Tier (1 Month)</option>
+            <option value="Gold">Gold Tier (3 Months)</option>
+            <option value="Platinum" selected>Platinum Tier (6 Months)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="addClientPlan">Initial Workout Plan</label>
+          <select id="addClientPlan" class="form-select">
+            <option value="5-Day Split">5-Day Split</option>
+            <option value="Push-Pull-Legs" selected>Push-Pull-Legs</option>
+            <option value="3-Day Split">3-Day Split</option>
+            <option value="3-Day Split for Women">3-Day Split for Women</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group">
+          <label class="form-label" for="addClientWeight">Weight (kg)</label>
+          <input type="number" id="addClientWeight" class="form-input" placeholder="75" value="75">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="addClientHeight">Height (cm)</label>
+          <input type="number" id="addClientHeight" class="form-input" placeholder="175" value="175">
+        </div>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group" style="flex: 1.5;">
+          <label class="form-label" for="addClientCalories">Calculated Daily Calories Goal</label>
+          <input type="number" id="addClientCalories" class="form-input" placeholder="2400" value="2400">
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label class="form-label" for="addClientSlot">Assign Daily Time Slot</label>
+          <select id="addClientSlot" class="form-select">
+            <option value="none">No slot assigned</option>
+            <option value="slot-06">06:00 AM</option>
+            <option value="slot-07">07:00 AM</option>
+            <option value="slot-08">08:00 AM</option>
+            <option value="slot-09">09:00 AM</option>
+            <option value="slot-10">10:00 AM</option>
+            <option value="slot-11">11:00 AM</option>
+            <option value="slot-16">04:00 PM</option>
+            <option value="slot-17">05:00 PM</option>
+            <option value="slot-18">06:00 PM</option>
+            <option value="slot-19">07:00 PM</option>
+            <option value="slot-20">08:00 PM</option>
+            <option value="slot-21">09:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="app.submitAddClient()" style="justify-content: center; width: 100%;">
+        Save Client Directory Record <i class="fa-solid fa-save"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL: MEMBERSHIP CHECKOUT SIMULATION -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-content-box glass-panel" style="text-align: center;">
+      <div class="modal-close-btn" onclick="app.closeCheckoutModal()"><i class="fa-solid fa-xmark"></i></div>
+      <div style="font-size: 3rem; color: var(--primary); margin-bottom: 10px;"><i class="fa-solid fa-circle-check"></i></div>
+      <h3 class="modal-title">Enrollment Registration</h3>
+      <p style="color: var(--text-muted); margin-top: -10px;">Select Payment Simulation Mode</p>
+
+      <div class="glass-panel" style="padding: 20px; text-align: left; margin: 10px 0; background: rgba(255,255,255,0.02);">
+        <div style="display: flex; justify-content: space-between; font-weight: 700;">
+          <span>Selected Plan:</span>
+          <span id="checkoutPlanName" style="color: var(--primary);">Platinum Plan</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 1.15rem; font-weight: 800; border-top: 1px solid var(--border-glass); padding-top: 8px;">
+          <span>Total Payout:</span>
+          <span id="checkoutPlanPrice">₹8,999</span>
+        </div>
+      </div>
+      
+      <div style="text-align: left;" class="form-group">
+        <label class="form-label">Full Name</label>
+        <input type="text" id="chkName" class="form-input" placeholder="e.g. Amit Kumar">
+      </div>
+
+      <div style="text-align: left;" class="form-group-row">
+        <div class="form-group">
+          <label class="form-label">Client Email</label>
+          <input type="email" id="chkEmail" class="form-input" placeholder="name@domain.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="chkSlot">Select Workout Hour</label>
+          <select id="chkSlot" class="form-select">
+            <option value="none">No slot chosen</option>
+            <option value="slot-06">06:00 AM - 07:00 AM</option>
+            <option value="slot-07">07:00 AM - 08:00 AM</option>
+            <option value="slot-08">08:00 AM - 09:00 AM</option>
+            <option value="slot-09">09:00 AM - 10:00 AM</option>
+            <option value="slot-10">10:00 AM - 11:00 AM</option>
+            <option value="slot-11">11:00 AM - 12:00 PM</option>
+            <option value="slot-16">04:00 PM - 05:00 PM</option>
+            <option value="slot-17">05:00 PM - 06:00 PM</option>
+            <option value="slot-18">06:00 PM - 07:00 PM</option>
+            <option value="slot-19">07:00 PM - 08:00 PM</option>
+            <option value="slot-20">08:00 PM - 09:00 PM</option>
+            <option value="slot-21">09:00 PM - 10:00 PM</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="app.submitCheckoutPayment()" style="justify-content: center; width: 100%;">
+        Simulate Transaction (Rupees) <i class="fa-solid fa-credit-card"></i>
+      </button>
+      
+      <div style="font-size: 0.75rem; color: var(--text-dark); margin-top: 10px;">
+        <i class="fa-solid fa-shield"></i> Standard encrypted Sandbox Simulation for FitWithKhemu client directory updates.
+      </div>
+    </div>
+  </div>
+
+  <!-- PREMIUM FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo">FITWITH<span>KHEMU</span></a>
+        <p>A comprehensive system engineered to deliver elite physical transformations under personal coaching guidance.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links-box">
+        <h4 class="footer-links-title">Quick Navigation</h4>
+        <div class="footer-links">
+          <a href="#home" class="footer-link" onclick="app.scrollToSection('home')">Home</a>
+          <a href="#gallery" class="footer-link" onclick="app.scrollToSection('gallery')">Gallery</a>
+          <a href="#schedule" class="footer-link" onclick="app.scrollToSection('schedule')">Schedule</a>
+          <a href="#programs" class="footer-link" onclick="app.scrollToSection('programs')">Schedules</a>
+          <a href="#calculator" class="footer-link" onclick="app.scrollToSection('calculator')">Calculator</a>
+          <a href="#pricing" class="footer-link" onclick="app.scrollToSection('pricing')">Memberships</a>
+        </div>
+      </div>
+
+      <div class="footer-links-box">
+        <h4 class="footer-links-title">GMS Admin Center</h4>
+        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Logged client logs synchronize instantly with database adaptors. To review records, authenticate using the portal access key.</p>
+        <button class="btn-secondary" onclick="app.openLoginModal()" style="padding: 10px 18px; font-size: 0.8rem; margin-top: 10px; text-transform: none; font-family: var(--font-body);">
+          <i class="fa-solid fa-lock"></i> System Authentication
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 FitWithKhemu. All rights reserved. Created in South Delhi, India.</div>
+      <div>Designed for Premium Athletic Performance</div>
+    </div>
+  </footer>
+
+  <!-- Database Connector -->
+  <script src="js/database.js"></script>
+  <!-- GMS Business Logic -->
+  <script src="js/gms.js"></script>
+  <!-- Application Framework -->
+  <script src="js/app.js"></script>
+</body>
+</html>
