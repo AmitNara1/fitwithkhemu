@@ -36,7 +36,6 @@ class AppController {
     window.addEventListener("load", () => {
       this.dismissLoader();
       this.syncSessionUI();
-      this.renderPublicSlotsBoard();
     });
   }
 
@@ -67,7 +66,6 @@ class AppController {
       publicExp.style.display = "block";
       gmsPanel.style.display = "none";
       window.scrollTo(0, 0);
-      this.renderPublicSlotsBoard();
     } else if (pageType === "gms") {
       publicExp.style.display = "none";
       gmsPanel.style.display = "block";
@@ -171,42 +169,7 @@ class AppController {
     resultPanel.style.display = "flex";
   }
 
-  // --- PUBLIC HOURS BOOKING BOARD ("Maintain the Clock") ---
-  renderPublicSlotsBoard() {
-    const slots = window.GMS.getSlots();
-    const board = document.getElementById("publicSlotsBoard");
-    if (!board) return;
 
-    board.innerHTML = "";
-    slots.forEach(s => {
-      const chip = document.createElement("div");
-      if (s.bookedBy) {
-        chip.className = "slot-chip booked glass-panel";
-        chip.innerHTML = `
-          <span class="slot-chip-time">${s.time}</span>
-          <span class="slot-chip-status"><i class="fa-solid fa-circle-xmark"></i> Slot Locked</span>
-        `;
-        chip.onclick = () => alert("This training slot is currently allocated to an active roster client. Please choose an open green slot.");
-      } else {
-        chip.className = "slot-chip available glass-panel";
-        chip.innerHTML = `
-          <span class="slot-chip-time">${s.time}</span>
-          <span class="slot-chip-status"><i class="fa-solid fa-circle-check"></i> Available</span>
-        `;
-        chip.onclick = () => this.handlePublicSlotBooking(s.id);
-      }
-      board.appendChild(chip);
-    });
-  }
-
-  handlePublicSlotBooking(slotId) {
-    const select = document.getElementById("contactSlot");
-    if (select) {
-      select.value = slotId;
-      alert(`Slot selected: ${document.querySelector(`#contactSlot option[value="${slotId}"]`).text}.\nWe are scrolling to the consultation sheet. Drop your contact data to log your request.`);
-      this.scrollToSection("contact");
-    }
-  }
 
   // --- MODALS DIALOG CONTROLS ---
   openLoginModal() {
