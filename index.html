@@ -29,8 +29,6 @@
       <nav class="nav-links" id="navLinks">
         <a href="#home" class="nav-link active" onclick="app.scrollToSection('home')">Home</a>
         <a href="#gallery" class="nav-link" onclick="app.scrollToSection('gallery')">Gallery</a>
-        <a href="#schedule" class="nav-link" onclick="app.scrollToSection('schedule')">Schedule</a>
-        <a href="#programs" class="nav-link" onclick="app.scrollToSection('programs')">Programs</a>
         <a href="#calculator" class="nav-link" onclick="app.scrollToSection('calculator')">Calculator</a>
         <a href="#pricing" class="nav-link" onclick="app.scrollToSection('pricing')">Memberships</a>
         <a href="#gms" class="nav-link" onclick="app.showPage('gms')" style="color: var(--primary); font-weight: 700;">GMS Portal</a>
@@ -63,25 +61,12 @@
             <button class="btn-primary" onclick="app.scrollToSection('pricing')">
               Explore Memberships <i class="fa-solid fa-arrow-right"></i>
             </button>
-            <button class="btn-secondary" onclick="app.scrollToSection('schedule')">
-              Book Training Hour
+            <button class="btn-secondary" onclick="app.scrollToSection('contact')">
+              Book Consultation
             </button>
           </div>
           
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-value">25<span>/25</span></span>
-              <span class="stat-label">Clients Limit</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value">98<span>%</span></span>
-              <span class="stat-label">Success Rate</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value">8<span>+</span></span>
-              <span class="stat-label">Years Exp</span>
-            </div>
-          </div>
+
         </div>
 
         <!-- Phone Mockup Preview (GMS Portal Simulation) -->
@@ -186,72 +171,7 @@
       </div>
     </section>
 
-    <!-- CLOCK: TIME SLOTS AVAILABILITY GRID ("Maintain the Clock") -->
-    <section class="section" id="schedule" style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
-      <div class="section-container">
-        <div class="slots-intro-grid">
-          <div>
-            <span class="section-subtitle">Hour Slots Board</span>
-            <h2 style="font-size: 2.25rem; font-weight: 800; text-transform: uppercase; margin-top: 6px;">Maintain The Clock</h2>
-            <p style="color: var(--text-muted); margin-top: 15px;">Khemu limits his roster to 25 elite clients to ensure premium coaching quality. Every registered client is allocated **one specific 1-hour workout slot** per day. Check the live board below to see available hours and book yours before slots fill!</p>
-          </div>
-          
-          <div class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; gap: 12px; border-color: rgba(16, 185, 129, 0.2);">
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--secondary); text-transform: uppercase;"><i class="fa-solid fa-circle-check"></i> System Scaling &amp; Load Health</div>
-            <div style="font-size: 0.9rem; color: var(--text-muted);">FitWithKhemu GMS is connected to a high-capacity database adapter. Cloud synchronizations take place instantly across client portals. Live booking slots are locked once confirmed by Coach Khemu.</div>
-          </div>
-        </div>
 
-        <div class="slots-board" id="publicSlotsBoard">
-          <!-- JS Injection -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Workout Programs Section -->
-    <section class="section" id="programs">
-      <div class="section-container">
-        <div class="section-header">
-          <span class="section-subtitle">Exclusive Schedules</span>
-          <h2 class="section-title">Designed for Maximum Impact</h2>
-        </div>
-        
-        <div class="programs-grid">
-          <div class="program-card glass-panel">
-            <div class="program-icon"><i class="fa-solid fa-dumbbell"></i></div>
-            <h3 class="program-title">5-Day Intense Split</h3>
-            <p class="program-desc">For experienced lifters looking to maximize muscle hypertrophy. Focuses on targeted isolation and progressive overload schedules.</p>
-            <ul class="program-features">
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> 8 weeks worth of intense splits</li>
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Focus on mind-muscle connection</li>
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> 5 days workout, 2 rest days</li>
-            </ul>
-          </div>
-
-          <div class="program-card glass-panel">
-            <div class="program-icon"><i class="fa-solid fa-bolt"></i></div>
-            <h3 class="program-title">Push-Pull-Legs</h3>
-            <p class="program-desc">The ultimate functional schedule balancing muscle groups. Highly recommended for sustainable structural athletic builds.</p>
-            <ul class="program-features">
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Advanced 6-day split</li>
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Perfect balance of volume/frequency</li>
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Custom heavy leg schedules</li>
-            </ul>
-          </div>
-
-          <div class="program-card glass-panel">
-            <div class="program-icon"><i class="fa-solid fa-person-running"></i></div>
-            <h3 class="program-title">3-Day Full Body Split</h3>
-            <p class="program-desc">Perfect for busy professionals. Maximizes metabolic response and systemic conditioning with compound movements.</p>
-            <ul class="program-features">
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> 3 compound-heavy session/week</li>
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Cardio conditioning guidelines</li>
-              <li class="program-feature-item"><i class="fa-solid fa-square-check"></i> Time-efficient yet highly effective</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- BMR & Calorie Calculator -->
     <section class="section" id="calculator" style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
@@ -333,43 +253,7 @@
       </div>
     </section>
 
-    <!-- SPONSORS & BRAND PARTNERS (ELEGANT INTEGRATED AD BLOCK) -->
-    <section class="section-container" style="padding: 20px 24px 0;">
-      <div class="ad-wrapper glass-panel">
-        <span class="ad-label">Premium Brand Partnerships</span>
-        <div class="ad-banner-grid">
-          <!-- Optimum Nutrition Affiliate -->
-          <div class="ad-card glass-panel" onclick="alert('Redirecting to Optimum Nutrition supplement affiliate shop under Khemu's partner discount code: KHEMU10')">
-            <div class="ad-card-icon"><i class="fa-solid fa-prescription-bottle"></i></div>
-            <div class="ad-card-info">
-              <span class="ad-card-brand">Gold Standard Whey</span>
-              <span class="ad-card-title">Optimum Nutrition India</span>
-              <span class="ad-card-discount">10% Off: KHEMU10</span>
-            </div>
-          </div>
 
-          <!-- MyProtein Affiliate -->
-          <div class="ad-card glass-panel" onclick="alert('Redirecting to MyProtein supplements online catalog with active coach code: FITWITHKHEMU')">
-            <div class="ad-card-icon"><i class="fa-solid fa-cookie-bite"></i></div>
-            <div class="ad-card-info">
-              <span class="ad-card-brand">Impact Whey Protein</span>
-              <span class="ad-card-title">MyProtein India</span>
-              <span class="ad-card-discount">Extra 15% Off Code</span>
-            </div>
-          </div>
-
-          <!-- Under Armour Affiliate -->
-          <div class="ad-card glass-panel" onclick="alert('Redirecting to Under Armour athletic gear outlet with partner code: UA-KHEMU')">
-            <div class="ad-card-icon"><i class="fa-solid fa-shirt"></i></div>
-            <div class="ad-card-info">
-              <span class="ad-card-brand">Premium Gym Gear</span>
-              <span class="ad-card-title">Under Armour Apparel</span>
-              <span class="ad-card-discount">Exclusive Outlet Access</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Membership Plans Section -->
     <section class="section" id="pricing">
@@ -998,8 +882,6 @@
         <div class="footer-links">
           <a href="#home" class="footer-link" onclick="app.scrollToSection('home')">Home</a>
           <a href="#gallery" class="footer-link" onclick="app.scrollToSection('gallery')">Gallery</a>
-          <a href="#schedule" class="footer-link" onclick="app.scrollToSection('schedule')">Schedule</a>
-          <a href="#programs" class="footer-link" onclick="app.scrollToSection('programs')">Schedules</a>
           <a href="#calculator" class="footer-link" onclick="app.scrollToSection('calculator')">Calculator</a>
           <a href="#pricing" class="footer-link" onclick="app.scrollToSection('pricing')">Memberships</a>
         </div>
